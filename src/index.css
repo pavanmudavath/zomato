@@ -1,0 +1,36 @@
+.top-appbar{
+    display: flex;
+    justify-content: space-around;
+
+  }
+  /* .card{
+    width="800px",
+    height="50px",
+    marginTop:"10px", display:"flex", alignItems:"flex-start">
+  } */
+
+
+ .card-content{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+ }
+ .card-content1{
+    display: flex;
+    margin-top: 5px;
+    align-items: center;
+    margin-left: 10px;
+ }
+
+ .searchInput{
+    border: none;
+ }
+ .searchInput:focus{
+    outline: none;
+ }
+ .searchInput::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    display: none;
+}
