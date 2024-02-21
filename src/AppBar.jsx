@@ -18,28 +18,38 @@ const AppBar = () => {
                 <input type="search" className='searchInput' placeholder="Search for restaurant, cuisine or a dish" style={{ width: "100%" }}></input>
          </div>
             </Card>
-            <Button style={{width:"70px",color:"black"}}
+            <Button style={{width:"70px",color:"#838383"}}
             onClick={()=>{
                 navigate("/login")
             }}
-            >Login</Button>
-            <Button style={{width:"70px",color:"black"}}
+            >Log in</Button>
+            <Button style={{width:"80px",color:"#838383"}}
             onClick={()=>{
                 navigate("/signup")
             }}
-            >SignUp</Button>
+            >Sign Up</Button>
             
 
         </Card>
-        <Card style={{width:"100%",backgroundColor:"pink",height:"75px",display:"flex"}}>
-            <Card style={{width:"60px",height:"60px",display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"30px",marginLeft:"20px",marginTop:"8px",backgroundColor:"#f8f8f8"}}>
+        <Card style={{width:"100%",height:"90px",display:"flex"}}>
+            <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginBottom:"10px"}}>
+            <Card style={{width:"60px",height:"60px",borderRadius:"30px",marginLeft:"260px",marginTop:"8px",backgroundColor:"#f8f8f8",display:"flex",justifyContent:"center",alignItems:"center"}}>
             <img src='../src/images/78d25215ff4c1299578ed36eefd5f39d1616149985.avif' alt='plate-img' style={{height:"40px",width:"40px"}}/>
             </Card>
-            <Typography>hidnpgeirge</Typography>
-            <Card style={{width:"60px",height:"60px",display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"30px",marginLeft:"20px",marginTop:"8px",backgroundColor:"#f8f8f8"}}>
-            <img src='../src/images/78d25215ff4c1299578ed36eefd5f39d1616149985.avif' alt='plate-img' style={{height:"40px",width:"40px"}}/>
+            <Typography variant='h6' style={{color:"#6a6a6a",marginLeft:"10px"}}>Dining Out</Typography>
+            </div>
+            <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginBottom:"10px"}}>
+            <Card style={{width:"60px",height:"60px",borderRadius:"30px",marginLeft:"20px",marginTop:"8px",backgroundColor:"#f8f8f8",display:"flex",justifyContent:"center",alignItems:"center"}}>
+            <img src='../src/images/246bbd71fbba420d5996452be3024d351616150055.webp' alt='plate-img' style={{height:"40px",width:"40px"}}/>
             </Card>
-            
+            <Typography variant='h6' style={{color:"#6a6a6a",marginLeft:"10px"}}>Delivery</Typography>
+            </div>
+            <div style={{display:"flex",justifyContent:"center",alignItems:"center",marginBottom:"10px"}}>
+            <Card style={{width:"60px",height:"60px",borderRadius:"30px",marginLeft:"20px",marginTop:"8px",backgroundColor:"#f8f8f8",display:"flex",justifyContent:"center",alignItems:"center"}}>
+            <img src='../src/images/01040767e4943c398e38e3592bb1ba8a1616150142.webp' alt='plate-img' style={{height:"40px",width:"40px"}}/>
+            </Card>
+            <Typography variant='h6' style={{color:"#6a6a6a",marginLeft:"10px"}}>NightLife</Typography>
+            </div>
         </Card>
     </div>
   )
