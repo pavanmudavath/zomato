@@ -1,42 +1,48 @@
-import { Card ,Typography,Button} from '@mui/material'
+import { Button, Card, Typography } from '@mui/material'
 import React from 'react';
+import Location from "../src/location.jsx"
 import { useNavigate } from 'react-router-dom';
 
 const AppBar = () => {
-    const navigate=useNavigate(); 
-  return <Card style={{height:"100px" }}>
-    
-    <div className='top-appbar'>
-        <Typography variant="h1" style={{fontSize:"50px",fontWeight:"bold"}}>zomato</Typography>
-        <div>
-        <Card   style={{width:"800px" , height:"50px", marginTop:"10px",display:"flex", alignContent:"center"}}>
-          <div class="card-content">
-                <img src="/src/images/placeholder.png" alt='location-icon'width="20px" height="20px" />
-                <input type="search" className='searchInput' placeholder="Hyderabad"></input>
-                <img src="/src/images/down.png" alt='location-icon'width="15px" height="15px" />
-         </div>
-         <div style={{ width:"2px",height:"50px", backgroundColor:"#ebebeb" , margin:"5px 0"}}></div>
+    const navigate=useNavigate();
+  return (
+    <div>
+        <Card style={{width:"100%",height:"75px",display:"flex",justifyContent:"center",alignItems:"center"}}>
+            <img  src='../src/images/b40b97e677bc7b2ca77c58c61db266fe1603954218 (1).avif' alt='zomato' style={{width:"130px",height:"27px",marginRight:"20px"}}/>
+            <Card style={{width:"650px",height:"55px",marginRight:"70px",display:"flex",alignItems:"center"}}>
+                <img src='../src/images/placeholder.png' alt='location' style={{width:"22px",marginLeft:"10px"}}/>
+                <Location/>
+                <div style={{ width:"1px",height:"20px", backgroundColor:"#ebebeb" , marginLeft:"-80px"}}></div>
           <div class="card-content1" style={{ flexGrow: 1 }}>
-                <img src="/src/images/magnifying-glass.png" alt='location-icon'width="20px" height="20px" />
+                <img src="/src/images/magnifying-glass.png" alt='location-icon' style={{width:"25px",marginRight:"10px"}} />
                 <input type="search" className='searchInput' placeholder="Search for restaurant, cuisine or a dish" style={{ width: "100%" }}></input>
          </div>
-        </Card>
-        </div>
-        <div>
-        <Button style={{width:"75px", height:"35px",  marginTop:"10px",marginRight:"10px",color:"black"}}
-        onClick={()=>{
-            navigate("/login")
-        }}>Login</Button>
+            </Card>
+            <Button style={{width:"70px",color:"black"}}
+            onClick={()=>{
+                navigate("/login")
+            }}
+            >Login</Button>
+            <Button style={{width:"70px",color:"black"}}
+            onClick={()=>{
+                navigate("/signup")
+            }}
+            >SignUp</Button>
+            
 
-        <Button style={{width:"75px", height:"35px", marginTop:"10px",color:"black"}}
-        onClick={()=>{
-            navigate("/signup")
-        }}
-        >SignUp</Button>
-        </div>
+        </Card>
+        <Card style={{width:"100%",backgroundColor:"pink",height:"75px",display:"flex"}}>
+            <Card style={{width:"60px",height:"60px",display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"30px",marginLeft:"20px",marginTop:"8px",backgroundColor:"#f8f8f8"}}>
+            <img src='../src/images/78d25215ff4c1299578ed36eefd5f39d1616149985.avif' alt='plate-img' style={{height:"40px",width:"40px"}}/>
+            </Card>
+            <Typography>hidnpgeirge</Typography>
+            <Card style={{width:"60px",height:"60px",display:"flex",justifyContent:"center",alignItems:"center",borderRadius:"30px",marginLeft:"20px",marginTop:"8px",backgroundColor:"#f8f8f8"}}>
+            <img src='../src/images/78d25215ff4c1299578ed36eefd5f39d1616149985.avif' alt='plate-img' style={{height:"40px",width:"40px"}}/>
+            </Card>
+            
+        </Card>
     </div>
-        
-    </Card>
+  )
 }
 
 export default AppBar
