@@ -1,8 +1,10 @@
 import { Button, Card, Typography,TextField,Checkbox } from "@mui/material";
 import PhoneNumber from "./Phonenumber";
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+import {useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate=useNavigate();
  return <div style={{
     marginTop:'7%',
     marginLeft:'35%',
@@ -23,8 +25,14 @@ const Login = () => {
       
 
     <div style={{marginLeft:"15px",marginRight:"25px",display:"flex",justifyContent:"space-between"}}>
-    <Typography style={{marginTop:"15px"}} variant="h4">Login</Typography>
-    <img src="/src/images/close.png" style={{ height:"15px",width:"15px",marginTop:'25px'}}/>
+    <Typography onClick={()=>{
+      navigate("/login")
+    }}
+     style={{marginTop:"15px",cursor:"pointer"}} variant="h4">Login</Typography>
+    <img onClick={()=>{
+      navigate("/")
+    }}
+     src="/src/images/close.png" style={{ height:"15px",width:"15px",marginTop:'25px',cursor:"pointer"}}/>
     </div>
  <div>
   <PhoneNumber/>
@@ -58,7 +66,11 @@ Send One Time Password
  </div>
 
  <div style={{marginLeft:"15px",marginTop:"15px"}}>
-  <Typography >New to Zomato? <a style={{cursor:"pointer",color:"#f05a69"}}>Create account</a></Typography>
+  <Typography >New to Zomato? <a 
+   onClick={()=>{
+    navigate("/signup")
+   }}
+   style={{cursor:"pointer",color:"#f05a69"}}>Create account</a></Typography>
  </div>
 
   </div>

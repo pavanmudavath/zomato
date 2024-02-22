@@ -1,8 +1,10 @@
 import { Button, Card, Typography,TextField,Checkbox } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
 const SignUp = () => {
+  const navigate =useNavigate();
   const [fullName,setFullName]=useState('');
   const [email,setEmail]=useState('');
   const [isFilled,setIsFilled]=useState(false);
@@ -45,8 +47,11 @@ const SignUp = () => {
       }}></div>
 
     <div style={{marginLeft:"15px",marginRight:"25px",display:"flex",justifyContent:"space-between"}}>
-    <Typography style={{marginTop:"15px"}} variant="h4">SignUp</Typography>
-    <img src="/src/images/close.png" style={{ height:"15px",width:"15px",marginTop:'25px'}}/>
+    <Typography style={{marginTop:"15px",cursor:"pointer"}} variant="h4">SignUp</Typography>
+    <img onClick={()=>{
+      navigate("/")
+    }}
+    src="/src/images/close.png" style={{ height:"15px",width:"15px",marginTop:'25px',cursor:"pointer"}}/>
     </div>
     <div style={{width:"100%",marginTop:"30px"}}>
     <TextField style={{ width: "calc(100% - 30px)", marginRight: "15px", marginLeft: "15px",marginBottom:"20px" }} label="Full Name" value={fullName} onChange={handleFullNameChange}/>
@@ -78,7 +83,10 @@ const SignUp = () => {
  </div>
 
  <div style={{marginLeft:"15px",marginTop:"15px"}}>
-  <Typography>Already have an account? <a style={{cursor:"pointer",color:"#f05a69"}}>Log in</a></Typography>
+  <Typography>Already have an account? <a  onClick={()=>{
+    navigate("/login")
+  }}
+  style={{cursor:"pointer",color:"#f05a69"}}>Log in</a></Typography>
  </div>
 
   </div>
